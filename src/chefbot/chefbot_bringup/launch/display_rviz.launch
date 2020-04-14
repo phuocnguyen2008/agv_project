@@ -1,0 +1,13 @@
+<!-- Displays urdf model in rviz -->
+<launch>
+
+  <arg name="prefix" value="r1" />
+  <arg name="robot_description" default="$(find chefbot_description)/urdf1/robot.xacro"/>
+  
+  <!--arg name="rvizconfig" default="$(find chefbot_bringup)/rviz/urdf.rviz" /-->
+
+  <param name="robot_description" 
+         command="$(find xacro)/xacro $(arg robot_description)" />
+
+  <!--node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" /-->
+</launch>
